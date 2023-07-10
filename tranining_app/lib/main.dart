@@ -72,6 +72,12 @@ class MyApp extends StatelessWidget {
             fontFamily: "Open-sans",
           ),
         ),
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+          iconTheme: IconThemeData(
+            color: Colors.black,
+          ),
+        ),
       ),
       home: const HomeScreen(),
     );
