@@ -1,0 +1,30 @@
+{
+  "name": "training_app",
+  "version": "1.0.0",
+  "description": "The backend of the Training App serves as the backbone of the application, handling the server-side operations and data management. It ensures seamless communication between the frontend user interface and the app's database. Some Components are: 1. User Management 2. Course Management 3.Data Storage and Retrival 4. Progress tracking 5. Assessments and Certifications 6. Discussions Forums 7. Notifications and Reminders. Overall The backend serves as the foundation for the capacity Building Training App, ensuring efficient data mangement, usr authentication, course delivery ans user engagement.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeepeshKalura/custom_capacity_building_training_app.git"
+  },
+  "keywords": [
+    "Custom",
+    "Training",
+    "App",
+    "Server",
+    "Side"
+  ],
+  "author": "Deepesh Kalura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeepeshKalura/custom_capacity_building_training_app/issues"
+  },
+  "homepage": "https://github.com/DeepeshKalura/custom_capacity_building_training_app#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  }
+}
