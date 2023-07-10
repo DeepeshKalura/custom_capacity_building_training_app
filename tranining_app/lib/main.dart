@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'view/screen/home/home_screen.dart';
+import 'view/screen/home/learn_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Course Mangaement App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.lightBlue,
         textTheme: const TextTheme(
           displayLarge: TextStyle(
             fontSize: 32,
@@ -79,7 +79,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const HomeScreen(),
+      home: const LearnScreen(),
     );
   }
 }
