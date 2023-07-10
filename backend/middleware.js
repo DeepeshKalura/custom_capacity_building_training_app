@@ -1,5 +1,6 @@
+const dotenv=require("dotenv").config();
 const jwt=require('jsonwebtoken')
-  const secretKey="abc";
+const secretKey=process.env.SECRET_KEY;
 const fetchUser=async(req,res,next)=>{
   try {
     const token=req.header('authToken')

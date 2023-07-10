@@ -1,16 +1,15 @@
-
+const dotenv=require("dotenv").config();
 const model=require('./model.js');
 const bcrypt=require('bcryptjs')
 const jwt=require('jsonwebtoken')
 const nodemailer = require("nodemailer");
 var Mailgen = require('mailgen');
 const otpGenerator = require('otp-generator')
-
+const secretKey=process.env.SECRET_KEY;
 exports.addUser=async(req,res)=>{
   const{name,email,password}=req.body;
   try{
   const user=await model.findOne({email});
-  const secretKey="abc";
   if(!user){
     const newUser=new model({name,email,password})
     const save=await newUser.save();
@@ -38,7 +37,6 @@ exports.loginUser = async (req, res) => {
     if (!isPasswordValid) {
       return res.status(400).json('Wrong credentials');
     }
-    const secretKey="abc";
   const data={
     user:{
      id: user.id
@@ -71,8 +69,8 @@ exports.email=async(req,res)=>{
           service:"gmail",
           secure: true,
           auth: {
-            user: "pranajlrana1235@gmail.com",
-            pass: "egbxtitchikaadba"
+            user: process.env.USER_EMAIL,
+            pass: process.env.USER_PASS
           }
         });
     var mailGenerator = new Mailgen({
@@ -101,7 +99,7 @@ const otp=await otpGenerator.generate(6, { upperCaseAlphabets: false, specialCha
 var emailBody = mailGenerator.generate(email);
 var emailText = mailGenerator.generatePlaintext(email);
   const info = await transporter.sendMail({
-    from: 'pranajlrana1235@gmail.com',
+    from: process.env.USER_EMAIL,
     to: Email, 
     subject: "Yo Bro", 
     // text: emailText, 
