@@ -33,6 +33,8 @@ class _HomeScreenState extends State<HomeScreen> {
     _searchController.dispose();
   }
 
+  var currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -365,25 +367,53 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-        // ! Pretty Messy Bottom Navigation Bar here
         bottomNavigationBar: BottomNavigationBar(
-          currentIndex: 0,
-          onTap: (index) {},
-          fixedColor: Colors.red,
-          items: const [
+          elevation: 0,
+          currentIndex: currentIndex,
+          onTap: (index) {
+            currentIndex = index;
+          },
+          enableFeedback: true,
+          // selectedItemColor: Colors.white,
+          unselectedItemColor: const Color.fromRGBO(83, 192, 250, 1),
+          mouseCursor: SystemMouseCursors.cell,
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              // backgroundColor: Color.fromRGBO(83, 192, 250, 1),
+              activeIcon: Container(
+                height: 40,
+                width: 80,
+                decoration: BoxDecoration(
+                  color: const Color.fromRGBO(83, 192, 250, 1),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Row(
+                  children: [
+                    Icon(Icons.home, color: Colors.white),
+                    // SizedBox(width: 5),
+                    Text(
+                      'Home',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+              icon: const Icon(Icons.home),
               label: 'Home',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.search),
               label: 'Search',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
+              icon: Icon(Icons.book),
+              label: 'Add',
+            ),
+            const BottomNavigationBarItem(
               icon: Icon(Icons.bookmark),
               label: 'Bookmark',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.person),
               label: 'Profile',
             ),
