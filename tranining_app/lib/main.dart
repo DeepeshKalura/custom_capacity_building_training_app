@@ -74,10 +74,12 @@ class MyApp extends StatelessWidget {
         ),
         appBarTheme: const AppBarTheme(
           elevation: 0,
+          backgroundColor: Colors.white,
           iconTheme: IconThemeData(
             color: Colors.black,
           ),
         ),
+        scaffoldBackgroundColor: const Color.fromRGBO(229, 238, 243, 1),
       ),
       home: const LearnScreen(),
     );

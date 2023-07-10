@@ -39,9 +39,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromRGBO(229, 238, 243, 1),
+        // backgroundColor: const Color.fromRGBO(229, 238, 243, 1),
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          // backgroundColor: Colors.white,
           bottom: PreferredSize(
             preferredSize:
                 Size.fromHeight(MediaQuery.of(context).size.height * 0.06),
