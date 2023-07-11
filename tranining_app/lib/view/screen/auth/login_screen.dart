@@ -30,15 +30,18 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               SizedBox(
                 width: double.infinity,
-                height: MediaQuery.of(context).size.height * 0.42,
-                child: Image.asset(
-                  "assets/illustration/login.jpg",
-                  fit: BoxFit.fill,
+                height: MediaQuery.of(context).size.height * 0.43,
+                child: SvgPicture.asset(
+                  "assets/svg/login.svg",
+                  fit: BoxFit.cover,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 20, top: 10, bottom: 10),
-                child: Text("Login"),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10),
+                child: Text(
+                  "Login",
+                  style: Theme.of(context).textTheme.displayLarge,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(
@@ -68,8 +71,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           // icon: Icon(Icons.lock),
 
                           suffix: TextButton(
-                            child: const Text(
+                            child: Text(
                               "Forgot Password?",
+                              style: Theme.of(context).textTheme.labelSmall,
                             ),
                             onPressed: () {},
                           ),
@@ -105,10 +109,34 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: const Text("Login"),
                 ),
               ),
-              const Center(
-                child: Padding(
-                  padding: EdgeInsets.only(top: 15, bottom: 20),
-                  child: Text("Or, Login With"),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 5,
+                ),
+                child: Row(
+                  children: [
+                    const Expanded(
+                      child: Divider(
+                        color: Colors.blueGrey,
+                        thickness: 1,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      child: Text(
+                        'OR',
+                        style: Theme.of(context).textTheme.labelLarge,
+                      ),
+                    ),
+                    const Expanded(
+                      child: Divider(
+                        color: Colors.blueGrey,
+                        thickness: 1,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Padding(
@@ -121,109 +149,115 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ElevatedButton(
-                        style: ButtonStyle(
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
+                      style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
                           ),
-                          side: MaterialStateProperty.all<BorderSide>(
-                            const BorderSide(
-                              color: Colors.grey,
-                              width: 1,
-                            ),
-                          ),
-                          fixedSize: MaterialStateProperty.all<Size>(
-                            const Size(100, 60),
-                          ),
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.transparent,
-                          ),
-                          elevation: MaterialStateProperty.all<double>(0),
                         ),
-                        onPressed: () {},
-                        child: SvgPicture.asset(
-                          "assets/svg/google.svg",
-                          width: 40,
-                          height: 40,
-                        )),
+                        side: MaterialStateProperty.all<BorderSide>(
+                          const BorderSide(
+                            color: Colors.grey,
+                            width: 1,
+                          ),
+                        ),
+                        fixedSize: MaterialStateProperty.all<Size>(
+                          const Size(100, 60),
+                        ),
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.transparent,
+                        ),
+                        elevation: MaterialStateProperty.all<double>(0),
+                      ),
+                      onPressed: () {},
+                      child: SvgPicture.asset(
+                        "assets/svg/google.svg",
+                        width: 40,
+                        height: 40,
+                      ),
+                    ),
                     ElevatedButton(
-                        style: ButtonStyle(
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                          ),
-                          elevation: MaterialStateProperty.all<double>(0),
-                          side: MaterialStateProperty.all<BorderSide>(
-                            const BorderSide(
-                              color: Colors.grey,
-                              width: 1,
-                            ),
-                          ),
-                          fixedSize: MaterialStateProperty.all<Size>(
-                            const Size(100, 60),
-                          ),
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.transparent,
+                      style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
                           ),
                         ),
-                        onPressed: () {},
-                        child: SvgPicture.asset(
-                          "assets/svg/facebook.svg",
-                          width: 40,
-                          height: 40,
-                        )),
+                        elevation: MaterialStateProperty.all<double>(0),
+                        side: MaterialStateProperty.all<BorderSide>(
+                          const BorderSide(
+                            color: Colors.grey,
+                            width: 1,
+                          ),
+                        ),
+                        fixedSize: MaterialStateProperty.all<Size>(
+                          const Size(100, 60),
+                        ),
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.transparent,
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: SvgPicture.asset(
+                        "assets/svg/facebook.svg",
+                        width: 40,
+                        height: 40,
+                      ),
+                    ),
                     ElevatedButton(
-                        style: ButtonStyle(
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                          ),
-                          elevation: MaterialStateProperty.all<double>(0),
-                          side: MaterialStateProperty.all<BorderSide>(
-                            const BorderSide(
-                              color: Colors.grey,
-                              width: 1,
-                            ),
-                          ),
-                          fixedSize: MaterialStateProperty.all<Size>(
-                            const Size(100, 60),
-                          ),
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.white70,
+                      style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
                           ),
                         ),
-                        onPressed: () {},
-                        child: SvgPicture.asset(
-                          "assets/svg/microsoft.svg",
-                          width: 40,
-                          height: 40,
-                        )),
+                        elevation: MaterialStateProperty.all<double>(0),
+                        side: MaterialStateProperty.all<BorderSide>(
+                          const BorderSide(
+                            color: Colors.grey,
+                            width: 1,
+                          ),
+                        ),
+                        fixedSize: MaterialStateProperty.all<Size>(
+                          const Size(100, 60),
+                        ),
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.transparent,
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: SvgPicture.asset(
+                        "assets/svg/microsoft.svg",
+                        width: 40,
+                        height: 40,
+                      ),
+                    ),
                   ],
                 ),
               ),
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 15, bottom: 20),
+                  padding: const EdgeInsets.only(top: 3, bottom: 5),
                   child: RichText(
                     text: TextSpan(
                       text: "Don't have an account? ",
-                      style: const TextStyle(color: Colors.black),
+                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                            color: Colors.grey[700],
+                          ),
                       children: [
                         TextSpan(
                           onEnter: (event) {
-                            // TOTO: Check it and also can be use as function
+                            // TODO: Check it and also can be use as function
                           },
-                          text: "Sign Up",
-                          style: const TextStyle(
-                            color: Colors.blue,
-                            decoration: TextDecoration.underline,
-                          ),
+                          text: " Signup",
+                          style:
+                              Theme.of(context).textTheme.labelSmall?.copyWith(
+                                    // color: Colors.blue[700],
+                                    decoration: TextDecoration.underline,
+                                  ),
                         ),
                       ],
                     ),
