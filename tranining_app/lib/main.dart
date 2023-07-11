@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tranining_app/view/screen/auth/login_screen.dart';
+
+import 'view/screen/auth/signup_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -80,7 +81,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color.fromRGBO(229, 238, 243, 1),
       ),
-      home: const LoginScreen(),
+      home: const SignUpScreen(),
     );
   }
 }
