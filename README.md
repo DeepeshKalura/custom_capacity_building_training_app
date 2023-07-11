@@ -2,4 +2,4 @@
 
 Command to run server.js file:
 
-```node server.js```
+```node index.js```
