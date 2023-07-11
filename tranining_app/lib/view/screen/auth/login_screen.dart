@@ -255,7 +255,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           text: " Signup",
                           style:
                               Theme.of(context).textTheme.labelSmall?.copyWith(
-                                    // color: Colors.blue[700],
                                     decoration: TextDecoration.underline,
                                   ),
                         ),
