@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'view/screen/home/learn_screen.dart';
+import 'package:tranining_app/view/screen/intro/intro_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -81,7 +80,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color.fromRGBO(229, 238, 243, 1),
       ),
-      home: const LearnScreen(),
+      home: const IntroScreen(),
     );
   }
 }
