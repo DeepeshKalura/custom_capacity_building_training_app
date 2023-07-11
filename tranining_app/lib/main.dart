@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tranining_app/view/screen/intro/intro_screen.dart';
+import 'package:tranining_app/view/screen/auth/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,21 +14,21 @@ class MyApp extends StatelessWidget {
       title: 'Course Mangaement App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
-        textTheme: const TextTheme(
-          displayLarge: TextStyle(
+        primarySwatch: Colors.indigo,
+        textTheme: TextTheme(
+          displayLarge: const TextStyle(
             fontSize: 32,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: Color.fromARGB(255, 0, 24, 53),
             fontFamily: "Roboto",
           ),
-          displayMedium: TextStyle(
+          displayMedium: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
             color: Colors.black,
             fontFamily: "Roboto",
           ),
-          displaySmall: TextStyle(
+          displaySmall: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: Colors.black,
@@ -37,34 +37,34 @@ class MyApp extends StatelessWidget {
           labelLarge: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
-            fontFamily: "Sans-serif",
+            color: Colors.blueGrey[600],
+            fontFamily: "Open_Sans",
           ),
-          labelMedium: TextStyle(
+          labelMedium: const TextStyle(
             fontSize: 16,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w400,
             color: Colors.black,
-            fontFamily: "Sans-serif",
+            fontFamily: "Open_Sans",
           ),
-          labelSmall: TextStyle(
+          labelSmall: const TextStyle(
             fontSize: 12,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-            fontFamily: "Sans-serif",
+            fontWeight: FontWeight.w700,
+            color: Colors.indigo,
+            fontFamily: "Open_Sans",
           ),
-          bodyLarge: TextStyle(
+          bodyLarge: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.normal,
             color: Colors.black,
             fontFamily: "Open-sans",
           ),
-          bodyMedium: TextStyle(
+          bodyMedium: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.normal,
             color: Colors.black,
             fontFamily: "Open-sans",
           ),
-          bodySmall: TextStyle(
+          bodySmall: const TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.normal,
             color: Colors.black,
@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color.fromRGBO(229, 238, 243, 1),
       ),
-      home: const IntroScreen(),
+      home: const LoginScreen(),
     );
   }
 }
