@@ -64,8 +64,64 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto/Roboto-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Roboto/Roboto-Black.ttf
+          weight: 900
+    - family: Open_Sans
+      fonts: 
+        - asset: assets/fonts/Open_Sans/OpenSans-VariableFont_wdth_wght.ttf
+          weight: 400
+        - asset: assets/fonts/Open_Sans/static/OpenSans_Condensed-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Open_Sans/static/OpenSans_Condensed-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Open_Sans/static/OpenSans_Condensed-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Open_Sans/static/OpenSans_Condensed-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Open_Sans/static/OpenSans_Condensed-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Open_Sans/static/OpenSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Open_Sans/static/OpenSans-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Open_Sans/static/OpenSans-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Open_Sans/static/OpenSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Open_Sans/static/OpenSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Open_Sans/static/OpenSans-SemiBold.ttf
+          weight: 600
+        
+        - asset: assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-SemiBold.ttf
+          weight: 600
+        
+        
+
+
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
