@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'view/screen/auth/signup_screen.dart';
+import 'view/screen/auth/otp_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -59,17 +61,17 @@ class MyApp extends StatelessWidget {
             color: Colors.black,
             fontFamily: "Open-sans",
           ),
-          bodyMedium: const TextStyle(
+          bodyMedium: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.normal,
-            color: Colors.black,
-            fontFamily: "Open-sans",
+            color: Colors.grey[700],
+            fontFamily: "Roboto",
           ),
-          bodySmall: const TextStyle(
+          bodySmall: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.normal,
-            color: Colors.black,
-            fontFamily: "Open-sans",
+            color: Colors.grey[700],
+            fontFamily: "Roboto",
           ),
         ),
         appBarTheme: const AppBarTheme(
@@ -81,7 +83,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color.fromRGBO(229, 238, 243, 1),
       ),
-      home: const SignUpScreen(),
+      home: const OtpScreen(),
     );
   }
 }
