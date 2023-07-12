@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'view/screen/auth/otp_screen.dart';
+import 'view/screen/home/home_screen.dart';
 
 void main() {
   runApp(
@@ -10,7 +10,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -83,7 +82,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color.fromRGBO(229, 238, 243, 1),
       ),
-      home: const OtpScreen(),
+      home: const HomeScreen(),
     );
   }
 }
