@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        scaffoldBackgroundColor: const Color.fromRGBO(229, 238, 243, 1),
+        scaffoldBackgroundColor: const Color(0xFFE5EEF3),
       ),
       home: const HomeScreen(),
     );
